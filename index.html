@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAGASXIT OFFICIAL</title>
-    <!-- Menggunakan Font Montserrat agar terkesan modern/gaming -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>BAGASXIT HACKER | OFFICIAL STORE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -15,144 +14,287 @@
         }
 
         body {
-            background-color: #050c08;
+            background-color: #0b031a;
             color: #ffffff;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Rajdhani', sans-serif;
+            min-height: 100vh;
+            padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            background-image: 
+                radial-gradient(circle at 50% 10%, rgba(147, 51, 234, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 10% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 40%);
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* Container Utama Mobile-Friendly */
+        /* Efek garis matriks halus di latar belakang */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 10, 36, 0.3) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(18, 10, 36, 0.3) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Container Utama */
         .container {
             width: 100%;
-            max-width: 450px;
-            background: linear-gradient(135deg, #0a1610 0%, #050c08 100%);
-            border: 1px solid rgba(0, 255, 127, 0.15);
-            border-radius: 16px;
+            max-width: 460px;
+            background: rgba(15, 7, 32, 0.85);
+            border: 2px solid #9333ea;
+            border-radius: 24px;
             padding: 24px;
-            box-shadow: 0 0 30px rgba(0, 255, 127, 0.05);
+            box-shadow: 0 0 35px rgba(147, 51, 234, 0.25),
+                        inset 0 0 20px rgba(147, 51, 234, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        /* Efek garis pendaran petir neon di pojok atas container */
+        .container::after {
+            content: "";
+            position: absolute;
+            top: -2px; left: 20px; right: 20px; height: 2px;
+            background: linear-gradient(90deg, transparent, #06b6d4, #9333ea, #06b6d4, transparent);
+            box-shadow: 0 0 12px #06b6d4;
         }
 
         /* Header Section */
         .header {
             text-align: center;
             margin-bottom: 25px;
+            position: relative;
         }
 
-        .released-tag {
-            font-size: 11px;
-            letter-spacing: 2px;
-            color: #888;
-            text-transform: uppercase;
+        .badge-released {
+            display: inline-block;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 10px;
             font-weight: 700;
-            margin-bottom: 5px;
+            color: #06b6d4;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 4px 12px;
+            border-radius: 50px;
+            background: rgba(6, 182, 212, 0.05);
+            margin-bottom: 12px;
+            text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.1);
         }
 
         .header h1 {
-            font-size: 22px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
             font-weight: 900;
-            letter-spacing: 1px;
-            line-height: 1.3;
-            margin: 10px 0;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            letter-spacing: 1.5px;
+            line-height: 1.2;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            margin-bottom: 6px;
         }
 
-        .operator {
-            font-size: 12px;
-            color: #00ff7f;
-            font-weight: 700;
-            letter-spacing: 0.5px;
+        .header h1 span {
+            color: #9333ea;
+            text-shadow: 0 0 15px rgba(147, 51, 234, 0.6);
+        }
+
+        .brand-owner {
+            font-size: 13px;
+            font-weight: 600;
+            color: #ef4444; /* Merah Api */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            text-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
         }
 
         .divider {
             border: none;
-            border-top: 1px dashed rgba(255, 255, 255, 0.15);
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(147, 51, 234, 0.4), transparent);
             margin: 20px 0;
         }
 
-        /* Card Pricing / Box Premium */
-        .pricing-card {
-            background: rgba(10, 25, 18, 0.6);
-            border: 2px solid #00ff88;
-            border-radius: 16px;
-            padding: 25px 20px;
-            text-align: center;
-            box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
-            margin-bottom: 30px;
-        }
-
-        .card-title {
-            font-size: 18px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
-
-        .card-desc {
-            font-size: 13px;
-            color: #aaa;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .price {
-            font-size: 36px;
-            font-weight: 900;
-            color: #00ff88;
-            text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
-            margin-bottom: 10px;
-            font-family: monospace, sans-serif; /* Agar angka terlihat kaku futuristik */
-        }
-
-        .license-status {
-            font-size: 11px;
-            color: #3a9ad9;
-            font-weight: 700;
+        /* Bagian Status System */
+        .system-status {
+            background: rgba(6, 182, 212, 0.04);
+            border: 1px dashed rgba(6, 182, 212, 0.2);
+            border-radius: 12px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            font-size: 12px;
+            font-weight: 600;
             letter-spacing: 0.5px;
-            text-transform: uppercase;
+            margin-bottom: 25px;
         }
 
-        /* Section Title / Logs */
-        .section-title {
+        .status-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            border-left: 4px solid #00ff88;
-            padding-left: 10px;
+            gap: 6px;
         }
 
-        /* Feature Logs Item */
-        .feature-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-left: 4px solid #00ff88;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 12px;
+        .dot-pulse {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #22c55e;
         }
 
-        .feature-item-title {
+        /* Daftar Kartu Jualan (Pricing Menu) */
+        .menu-title {
+            font-family: 'Orbitron', sans-serif;
             font-size: 14px;
             font-weight: 700;
+            letter-spacing: 1px;
+            color: #06b6d4;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+        }
+
+        .product-card {
+            background: linear-gradient(145deg, rgba(20, 10, 40, 0.9) 0%, rgba(10, 5, 25, 0.9) 100%);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* Highlight khusus untuk paket premium utama / V5 */
+        .product-card.premium-v5 {
+            border: 2px solid #9333ea;
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.2);
+        }
+
+        .product-card.premium-v5::before {
+            content: "🔥 BEST SELLER";
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            background: linear-gradient(90deg, #ef4444, #f97316);
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 9px;
+            font-weight: 900;
+            padding: 2px 10px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        }
+
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .product-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
             color: #ffffff;
+        }
+
+        .product-card.premium-v5 .product-name {
+            color: #f3e8ff;
+            text-shadow: 0 0 10px rgba(147, 51, 234, 0.4);
+        }
+
+        .product-price {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            color: #06b6d4;
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+        }
+
+        .product-card.premium-v5 .product-price {
+            color: #a855f7;
+            text-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+        }
+
+        .product-desc {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .product-features {
+            list-style: none;
+            font-size: 12px;
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+
+        .product-features li {
             margin-bottom: 5px;
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
-        .feature-item-desc {
-            font-size: 12px;
-            color: #888;
-            line-height: 1.5;
+        .product-features li::before {
+            content: "⚡";
+            color: #9333ea;
+        }
+
+        /* Tombol Beli */
+        .btn-buy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+        }
+
+        .btn-buy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(147, 51, 234, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .product-card:not(.premium-v5) .btn-buy {
+            background: linear-gradient(90deg, rgba(147, 51, 234, 0.4) 0%, rgba(6, 182, 212, 0.4) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            box-shadow: none;
+        }
+
+        .license-info {
+            text-align: center;
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
@@ -160,38 +302,65 @@
 
     <div class="container">
         
-        <!-- Header -->
         <div class="header">
-            <div class="released-tag">👑 ——— [ Officially Released ] ——— 👑</div>
-            <h1>THE NO.1 PREMIUM<br>LUXURY SCRIPT V5</h1>
-            <div class="operator">BYPASS V5 EXPERIENCE • OPERATED BY @alenzzxit</div>
+            <div class="badge-released">⚡ [ SYSTEM ONLINE ] ⚡</div>
+            <h1>BAGASXIT <span>HACKER</span></h1>
+            <div class="brand-owner">
+                🔥 FIRE FIRE CHEATS • OPERATED BY @BagasXIT
+            </div>
         </div>
 
         <hr class="divider">
 
-        <!-- Card Harga -->
-        <div class="pricing-card">
-            <div class="card-title">💎 ALL FITUR PREMIUM SEPAKET (V5)</div>
-            <div class="card-desc">Mendapatkan seluruh fitur eksklusif tanpa batas.</div>
-            <div class="price">Rp 20.000</div>
-            <div class="license-status">( STATUS LISENSI: PERMANEN / LIFETIME )</div>
+        <div class="system-status">
+            <div class="status-item">
+                <div class="dot-pulse"></div>
+                <span>STATUS: ACTIVE</span>
+            </div>
+            <div class="status-item">
+                <span>🛡️ ANTI-BAN: 100% SECURE</span>
+            </div>
         </div>
 
-        <!-- Section Premium Features -->
-        <div class="section-title">
-            <span>🥞</span> PREMIUM FEATURES LOGS
+        <div class="menu-title">
+            <span>🛒</span> CHOOSE YOUR EXCLUSIVE MENU
         </div>
 
-        <!-- List Fitur 1 -->
-        <div class="feature-item">
-            <div class="feature-item-title">⚡ [INJECT] SPEED STRICK BR</div>
-            <div class="feature-item-desc">Akurasi & responsivitas tingkat tinggi instan.</div>
+        <div class="product-card premium-v5">
+            <div class="product-header">
+                <div class="product-name">ALL FITUR PREMIUM V5</div>
+                <div class="product-price">Rp 20.000</div>
+            </div>
+            <div class="product-desc">Mendapatkan seluruh akses fitur premium tanpa batas, bypass tingkat tinggi, dan optimasi instan.</div>
+            
+            <ul class="product-features">
+                <li>[INJECT] SPEED STRICK BR</li>
+                <li>[INJECT] SPEED FIRE VX7</li>
+                <li>AUTO-AIM & WALLHACK</li>
+            </ul>
+
+            <a href="https://wa.me/628xxxxxxxxxx?text=Halo%20BagasXIT,%20saya%20mau%20beli%20All%20Fitur%20Premium%20V5" target="_blank" class="btn-buy">
+                AMBIL LISENSI PERMANEN
+            </a>
+            <div class="license-info">🔓 STATUS: LIFETIME ACCESS</div>
         </div>
 
-        <!-- List Fitur 2 (Tambahan contoh) -->
-        <div class="feature-item">
-            <div class="feature-item-title">🔥 [INJECT] SPEED FIRE VX7</div>
-            <div class="feature-item-desc">Optimasi kestabilan jaringan dan performa tinggi.</div>
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-name">CHEATS PACK BASIC</div>
+                <div class="product-price">Rp 10.000</div>
+            </div>
+            <div class="product-desc">Paket menu standar bagi pemula untuk menguji kestabilan bypass fitur dasar.</div>
+            
+            <ul class="product-features">
+                <li>[INJECT] STANDARD SPEED</li>
+                <li>AUTO-AIM FIX LEVEL 1</li>
+            </ul>
+
+            <a href="https://wa.me/628xxxxxxxxxx?text=Halo%20BagasXIT,%20saya%20mau%20beli%20Cheats%20Pack%20Basic" target="_blank" class="btn-buy">
+                AMBIL LISENSI (1 BULAN)
+            </a>
+            <div class="license-info">🕒 STATUS: 30 DAYS LICENSE</div>
         </div>
 
     </div>
