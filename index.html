@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAGASXIT HACKER | OFFICIAL STORE</title>
+    <title>BAGASXIT | OFFICIAL STORE</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -29,7 +29,7 @@
             overflow-x: hidden;
         }
 
-        /* Efek garis matriks halus di latar belakang */
+        /* Background Matrix Line Effect */
         body::before {
             content: "";
             position: absolute;
@@ -55,7 +55,7 @@
             position: relative;
         }
 
-        /* Efek garis pendaran petir neon di pojok atas container */
+        /* Efek Listrik/Petir Neon di Pojok Atas */
         .container::after {
             content: "";
             position: absolute;
@@ -69,6 +69,17 @@
             text-align: center;
             margin-bottom: 25px;
             position: relative;
+        }
+
+        /* KODE LOGO BARU DI SINI */
+        .brand-logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 2px solid #9333ea;
+            box-shadow: 0 0 15px rgba(147, 51, 234, 0.6);
+            object-fit: cover;
+            margin-bottom: 12px;
         }
 
         .badge-released {
@@ -107,7 +118,7 @@
         .brand-owner {
             font-size: 13px;
             font-weight: 600;
-            color: #ef4444; /* Merah Api */
+            color: #ef4444; /* Warna Merah Api */
             letter-spacing: 1px;
             text-transform: uppercase;
             display: flex;
@@ -176,7 +187,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Highlight khusus untuk paket premium utama / V5 */
+        /* Highlight khusus untuk paket best seller / V5 */
         .product-card.premium-v5 {
             border: 2px solid #9333ea;
             box-shadow: 0 0 20px rgba(147, 51, 234, 0.2);
@@ -256,7 +267,7 @@
             color: #9333ea;
         }
 
-        /* Tombol Beli */
+        /* Tombol Beli / Aksi */
         .btn-buy {
             display: flex;
             justify-content: center;
@@ -302,7 +313,12 @@
 
     <div class="container">
         
+        <!-- Header -->
         <div class="header">
+            <!-- Menampilkan File Foto Logo Kamu -->
+            <img src="191013.png" alt="BagasXIT Logo" class="brand-logo">
+            
+            <br>
             <div class="badge-released">⚡ [ SYSTEM ONLINE ] ⚡</div>
             <h1>BAGASXIT <span>HACKER</span></h1>
             <div class="brand-owner">
@@ -312,6 +328,7 @@
 
         <hr class="divider">
 
+        <!-- System Live Status -->
         <div class="system-status">
             <div class="status-item">
                 <div class="dot-pulse"></div>
@@ -322,10 +339,12 @@
             </div>
         </div>
 
+        <!-- Menu Jualan Title -->
         <div class="menu-title">
             <span>🛒</span> CHOOSE YOUR EXCLUSIVE MENU
         </div>
 
+        <!-- PAKET 1: BEST SELLER V5 -->
         <div class="product-card premium-v5">
             <div class="product-header">
                 <div class="product-name">ALL FITUR PREMIUM V5</div>
@@ -345,6 +364,7 @@
             <div class="license-info">🔓 STATUS: LIFETIME ACCESS</div>
         </div>
 
+        <!-- PAKET 2: PAKET HEMAT -->
         <div class="product-card">
             <div class="product-header">
                 <div class="product-name">CHEATS PACK BASIC</div>
@@ -366,4 +386,5 @@
     </div>
 
 </body>
-</html>
+    </html>
+    
